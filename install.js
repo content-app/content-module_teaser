@@ -71,7 +71,7 @@ module.exports = async function ({ client, space, environment }) {
                 'validations': [
                     {
                         'linkContentType': [
-                            'itemTeaser'
+                            'ItemTeaser'
                         ]
                     }
                 ],
