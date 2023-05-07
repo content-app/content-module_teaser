@@ -1,37 +1,64 @@
 module.exports = async function ({ client, space, environment }) {
 
     const moduleItemFields = [
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "text",
+      "name": "Text",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "externalLink",
+      "name": "Link",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "pageLink",
+      "name": "pageLink",
+      "type": "Link",
+      "localized": false,
+      "required": false,
+      "validations": [
         {
-            'id': 'title',
-            'name': 'Title',
-            'type': 'Symbol',
-            'localized': false,
-            'required': true,
-            'validations': [],
-            'disabled': false,
-            'omitted': false
-        },
-        {
-            'id': 'text',
-            'name': 'Text',
-            'type': 'Symbol',
-            'localized': false,
-            'required': false,
-            'validations': [],
-            'disabled': false,
-            'omitted': false
-        },
-        {
-            'id': 'link',
-            'name': 'Link',
-            'type': 'Symbol',
-            'localized': false,
-            'required': false,
-            'validations': [],
-            'disabled': false,
-            'omitted': false
+          "linkContentType": [
+            "corePage"
+          ]
         }
-    ];
+      ],
+      "disabled": false,
+      "omitted": false,
+      "linkType": "Entry"
+    },
+    {
+      "id": "linkText",
+      "name": "linkText",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    }
+  ];
 
     const moduleItem = {
         name: 'Item: Teaser',
