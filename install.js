@@ -1,6 +1,6 @@
 module.exports = async function ({ client, space, environment }) {
 
-    const moduleItemFields =  "fields": [
+    const moduleItemFields =  [
     {
       "id": "title",
       "name": "Title",
@@ -84,37 +84,47 @@ module.exports = async function ({ client, space, environment }) {
     await contentType.publish();
 
     const fields = [
-        {
-            'id': 'title',
-            'name': 'Title',
-            'type': 'Symbol',
-            'localized': false,
-            'required': true,
-            'validations': [],
-            'disabled': false,
-            'omitted': false
-        },
-        {
-            'id': 'teaser',
-            'name': 'teaser',
-            'type': 'Array',
-            'localized': false,
-            'required': true,
-            'validations': [],
-            'disabled': false,
-            'omitted': false,
-            'items': {
-                'type': 'Link',
-                'validations': [
-                    {
-                        'linkContentType': [
-                            'ItemTeaser'
-                        ]
-                    }
-                ],
-                'linkType': 'Entry'
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "teaser",
+        "name": "teaser",
+        "type": "Array",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "ItemTeaser"
+              ]
             }
+          ],
+          "linkType": "Entry"
         }
+      },
+      {
+        "id": "headline",
+        "name": "Headline",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
     ];
 
     const module = {
