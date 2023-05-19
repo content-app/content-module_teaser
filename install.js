@@ -1,12 +1,22 @@
 module.exports = async function ({ client, space, environment }) {
 
-    const moduleItemFields = [
+    const moduleItemFields =  "fields": [
     {
       "id": "title",
       "name": "Title",
       "type": "Symbol",
       "localized": false,
       "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "headline",
+      "name": "Headline",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
       "validations": [],
       "disabled": false,
       "omitted": false
